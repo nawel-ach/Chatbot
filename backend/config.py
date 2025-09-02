@@ -11,7 +11,7 @@ class Config:
     DB_PASSWORD = os.getenv('DB_PASSWORD', 'nawel')
     
     # DeepSeek API
-    DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', 'sk-5af31b3987384cc7857d97fb89ccffd8')
+    DEEPSEEK_API_KEY = os.getenv('DEEPSEEK_API_KEY', 'hna thot api')
     DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
     
     # Flask
@@ -20,4 +20,5 @@ class Config:
     
     @property
     def DATABASE_URL(self):
+
         return f"postgresql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
